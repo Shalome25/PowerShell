@@ -1,1 +1,1 @@
-Get-MailboxFolderPermission -Identity email :\calendar
+Get-MailboxFolderPermission -Identity user@example :\calendar
