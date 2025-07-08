@@ -1,1 +1,1 @@
-Welcome to the PowerShell Script Library, a centralized collection of ready-to-use PowerShell scripts designed for network and Exchange administrators.
+This is a PowerShell Script Library for ready-to-use PowerShell commands and scripts designed for Network and Exchange administrators.
