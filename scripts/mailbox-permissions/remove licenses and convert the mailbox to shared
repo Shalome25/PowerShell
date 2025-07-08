@@ -1,4 +1,4 @@
-$user = "user@email.com"
+$user = "user@example.com"
 
 Connect-ExchangeOnline
 Set-Mailbox -Identity $user -Type Shared
