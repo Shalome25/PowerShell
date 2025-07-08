@@ -1,0 +1,14 @@
+$user = "user@email.com"
+
+Connect-ExchangeOnline
+Set-Mailbox -Identity $user -Type Shared
+Disconnect-ExchangeOnline -Confirm:$false
+
+Connect-MgGraph -Scopes "User.ReadWrite.All", "Directory.ReadWrite.All"
+$userObj = Get-MgUserLicenseDetail -UserId $user
+$assignedSkuIds = $userObj | Select-Object -ExpandProperty SkuId
+if ($assignedSkuIds.Count -gt 0) {
+    Set-MgUserLicense -UserId $user -RemoveLicenses $assignedSkuIds -AddLicenses @()
+}
+
+Disconnect-MgGraph
