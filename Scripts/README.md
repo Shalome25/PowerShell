@@ -1,1 +1,1 @@
-This folder is Mailbox scripts and commands.
+Folders for different scripts and commands.
